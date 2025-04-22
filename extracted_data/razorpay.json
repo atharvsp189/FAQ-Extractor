@@ -1,0 +1,44 @@
+{
+    "qas": [
+        {
+            "question": "What is the endpoint to capture a payment?",
+            "answer": "The endpoint to capture a payment is `POST /v1/payments/:id/capture`."
+        },
+        {
+            "question": "What should the status of the payment be to capture it?",
+            "answer": "The payment status must be `authorized` to capture it."
+        },
+        {
+            "question": "What parameters are required to capture a payment?",
+            "answer": "The required parameters are `amount` (integer) and `currency` (string)."
+        },
+        {
+            "question": "What is the format for the `amount` parameter?",
+            "answer": "The `amount` should be equal to the order amount, in the smallest unit of the currency."
+        },
+        {
+            "question": "What are the possible values for the `status` of a payment?",
+            "answer": "The possible values for the `status` are: `created`, `authorized`, `captured`, `refunded`, and `failed`."
+        },
+        {
+            "question": "What does the `captured` boolean indicate?",
+            "answer": "The `captured` boolean indicates if the payment has been captured."
+        },
+        {
+            "question": "What should you do if the capture amount is incorrect?",
+            "answer": "If the capture amount is incorrect, you will receive a 400 error stating 'Capture amount must be equal to the amount authorized.'"
+        },
+        {
+            "question": "What is the response format for a successful capture?",
+            "answer": "The response will include fields such as `id`, `entity`, `amount`, `currency`, `status`, `method`, and more."
+        },
+        {
+            "question": "What error occurs if the payment ID provided does not exist?",
+            "answer": "You will receive a 400 error stating 'The id provided does not exist.'"
+        },
+        {
+            "question": "What is the purpose of the `error_code` field in the response?",
+            "answer": "The `error_code` field indicates any error that occurred during the payment process."
+        }
+    ]
+}
